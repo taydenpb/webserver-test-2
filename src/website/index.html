@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greeting App</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #4a90e2, #9013fe);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 4rem auto;
+      padding: 3rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    .input-group {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+
+    #nameInput {
+      flex: 1;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #greeting {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    #error {
+      margin-top: 1rem;
+      color: red;
+    }
+
+    #websiteInfo {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #333;
+      display: none; /* Initially hidden */
+    }
+
+    #websiteInfo b {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome!</h1>
+    <div class="input-group">
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <button onclick="getGreeting()">Get Greeting</button>
+    </div>
+    <p id="greeting"></p>
+    <p id="error"></p>
+    <div class="input-group">
+      <button onclick="showWebsiteInfo()">Show Website Info</button>
+    </div>
+    <p id="websiteInfo">
+      This application is built using <b>Terraform</b>. The frontend is hosted on <b>Amazon S3</b>, and backend functionality is handled by a <b>Lambda function</b> connected through an <b>API Gateway</b>. The API Gateway processes <b>POST requests</b> and interacts with the Lambda to generate dynamic responses.
+    </p>
+  </div>
+
+  <script>
+    function showWebsiteInfo() {
+      const websiteInfo = document.getElementById("websiteInfo");
+      websiteInfo.style.display = "block";
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

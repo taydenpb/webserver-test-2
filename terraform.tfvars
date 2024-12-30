@@ -1,0 +1,6 @@
+aws_region  = "us-east-1"
+bucket_name = "greeting-app-demo"
+lambda_function_name = "greeting-function"
+lambda_role_name = "greeting_lambda_role"
+vpc_cidr = "10.0.0.0/16"
+subnet_cidr = "10.0.1.0/24"
