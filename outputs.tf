@@ -8,7 +8,7 @@ output "api_endpoint" {
 }
 
 output "example_output" {
-  value = "This is a new output (again)"
+  value = "Testing pull request - GIT"
 }
 
 output "vpc_id" {
